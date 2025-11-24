@@ -45,7 +45,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1uj2lD8goJDLo9uSg_8HcT4bxnl2trPc8")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1J63VuCKDQ7z5SqfZtfE7C0Bejg3F_Uuo")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -74,6 +74,10 @@ CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
     #   "images": ["https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
     #   "videos": ["https://youtu.be/XXXXXXXXXXX"]
     # },
+    labels[0]: {"중국식 냉면은 맛있어"}, "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EC%25A4%2591%25EA%25B5%25AD%25EB%2583%2589%25EB%25A9%25B4&psig=AOvVaw1jdHTpRyy3LKBqYmi5djeZ&ust=1764030021521000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLCFnYfCiZEDFQAAAAAdAAAAABAE"]},
+    labels[1] : {"짜장면은 맛있어"}, "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EC%25A7%259C%25EC%259E%25A5%25EB%25A9%25B4&psig=AOvVaw3qSViJ2PD3chSPtkV_-XnZ&ust=1764030094348000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKi27ajCiZEDFQAAAAAdAAAAABAE"]},
+    labels[2] : {"짬뽕은 맛있어"}, "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.10000recipe.com%2Frecipe%2F6947184%3Fsrsltid%3DAfmBOoq_61SOxrHLqu6pZHww0feCfSgNuD4IS8HxVyuddm6cb77S30j0&psig=AOvVaw3qMyZXLTynDP49B4Tqg3Og&ust=1764030142959000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOjq0sDCiZEDFQAAAAAdAAAAABAE"]},
+    labels[3] : {"탕수육은 맛있어"}, "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25ED%2583%2595%25EC%2588%2598%25EC%259C%25A1&psig=AOvVaw0-zHczjDIJlb4CHdJJok5A&ust=1764030184058000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLjbzdPCiZEDFQAAAAAdAAAAABAE"]},
 }
 
 # ======================
